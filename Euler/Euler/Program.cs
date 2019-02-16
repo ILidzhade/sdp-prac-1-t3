@@ -11,7 +11,7 @@ namespace Euler
         static void Main(string[] args)
         {
 
-            Console.Read();
+            Console.Read(); // stop console immediate exit 
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace Euler
                 sum += term;
             }
             Console.WriteLine($"Sum = {sum}");
-        }
+        }// FibSum
 
         /// <summary>
         /// Gets the nth term of the Fibonacci sequence
@@ -56,6 +56,23 @@ namespace Euler
         {
             return (number % 2 == 0);
         }// isEven
+        
+        /// <summary>
+        /// Prints first n terms in Fibonacci sequence
+        /// </summary>
+        /// <param name="n">nth term of Fib seq</param>
+        static void PrintFib(int n)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < n; i++)
+            {
+                long term = Fib(i);
+                sb.Append(term).Append("\n");
+            }
+            Console.WriteLine(sb.ToString());
+        }// PrintFib
+
 
         public bool isPrime(int x)
         {
