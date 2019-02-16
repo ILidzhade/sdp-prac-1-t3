@@ -10,7 +10,52 @@ namespace Euler
     {
         static void Main(string[] args)
         {
+
+            Console.Read();
         }
+
+        /// <summary>
+        /// Sums up all even terms in Fibonacci sequence
+        /// and displays result
+        /// </summary>
+        /// 
+        static void FibSum()
+        {
+            const long MAX_TERMS = 4000000; // max terms
+            long term = 0; // to store nth term in fib seq
+            int n = 1; // nth term counter
+            long sum = 0;
+            while (term < MAX_TERMS)
+            {
+                term = Fib(n++);
+                sum += term;
+            }
+            Console.WriteLine($"Sum = {sum}");
+        }
+
+        /// <summary>
+        /// Gets the nth term of the Fibonacci sequence
+        /// </summary>
+        /// <param name="n">The nth term</param>
+        /// <returns>The fibonacci number at n</returns>
+        static long Fib(int n)
+        {
+            if (n < 0) throw new ArgumentException("Term must be a positive integer");
+            if (n == 0) return 0; // Stop case 1
+            if (n == 1) return 1; // Stop case 2
+
+            return Fib(n - 1) + Fib(n - 2); // Recursive method
+        }// Fib
+
+        /// <summary>
+        /// Checks if number is even
+        /// </summary>
+        /// <param name="number">The number to evalute if even</param>
+        /// <returns>True when number is even, otherwise False.</returns>
+        static bool isEven(long number)
+        {
+            return (number % 2 == 0);
+        }// isEven
 
         public bool isPrime(int x)
         {
