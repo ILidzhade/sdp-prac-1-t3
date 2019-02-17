@@ -10,8 +10,7 @@ namespace Euler
     {
         static void Main(string[] args)
         {
-
-            Console.Read(); // stop console immediate exit 
+           
         }
 
         /// <summary>
@@ -31,6 +30,7 @@ namespace Euler
                 sum += term;
             }
             Console.WriteLine($"Sum = {sum}");
+
         }// FibSum
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Euler
         /// Prints first n terms in Fibonacci sequence
         /// </summary>
         /// <param name="n">nth term of Fib seq</param>
-        static void PrintFib(int n)
+        static void PrintFibSequence(int n)
         {
             StringBuilder sb = new StringBuilder();
 
