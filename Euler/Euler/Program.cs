@@ -69,7 +69,7 @@ namespace Euler
 				ray.Add(find_prime_factor(workin_num));
 				workin_num = workin_num / ray[ray.Count - 1];
 			}
-			Console.WriteLine("The largest prime factor of 600851475143 is" + ray[ray.Count - 1]);
+			Console.WriteLine("The largest prime factor of 600851475143 is " + ray[ray.Count - 1]);
 		}
     }
 }
