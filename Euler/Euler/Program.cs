@@ -10,6 +10,46 @@ namespace Euler
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("G17M0252");
+
+
+            Console.WriteLine("enter the number of natural number ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            int squares = 0;
+            // method to calculate the suquare of each natural number up to the specified number by the user 
+            //then adding the squares to get their sum 
+
+            for (int i = 0; i <= n; i++)
+            {
+                squares = i * i;
+                sum += squares;
+                Console.Write("{0}", squares);
+            }
+            Console.WriteLine("\n Sum of squares up to {0} terms={1}\n", n, sum);  // the sum of squares is given as an output.
+
+            int result = 0;
+            int square = 0;
+
+            //method to calculate the sum of all the natural numbers from 1 up to the given number by the user.
+            // then calculating the square of that sum.
+            for (int j = 0; j <= n; j++)
+            {
+                result += j;
+                square = result * result;
+                Console.Write("{0}", result);
+
+            }
+            Console.WriteLine("the square of the sum of natural numbers up to {0} terms={1}\n", n, square); // the square of sum is given as an output here.
+
+            // subtracting the sum of square as calculated in the first part from the square of sum as calculated in the second part to get the difference and output the result.
+            int difference = square - sum;
+            Console.WriteLine("the difference between the sum of squares and square of sum of natural numbers up to {0} terms={1}\n", n, difference);
+
+            Console.ReadLine();
+
+
             find_prime_factor_ray(600851475143);
             FibSum();
             Console.ReadLine();
